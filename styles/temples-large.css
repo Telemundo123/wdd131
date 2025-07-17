@@ -7,7 +7,7 @@
 body {
     font-family: sans-serif;
     width: 100%;
-    font-size: x-large;
+    font-size: larger;
 }
 header main footer {
     width: 100%;
@@ -60,7 +60,7 @@ h1 {
 
 .Album {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 40px;
     padding: 10px;
     justify-items: center;
