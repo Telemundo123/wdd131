@@ -1,0 +1,36 @@
+@media(max-width:760px) {
+    #hamburger {
+        display: block;
+        font-size: 3rem;
+	    font-weight: 400;
+	    text-decoration: none;
+	    padding: 0.5rem 0.75rem;
+	    background-color: rgb(1, 35, 74);
+	    color: white;
+    }
+    #navLinks {
+        display: none;
+    }
+    #hamburger::before {
+	   content: "☰";
+    }
+    
+    #navLinks.show {
+       display: flex;
+       padding: 40px; 
+       gap: 30px;
+       list-style: none;
+       align-items: center;   
+       flex-direction: column; 
+       width: 100vw; 
+       background-color: rgb(1, 35, 74); 
+       position: absolute;
+       top: 100px;                   
+       left: 0;
+       z-index: 99;
+    }
+    #hamburger.show::before {
+	    content: "X";
+    }
+    
+}
