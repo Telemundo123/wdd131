@@ -21,3 +21,5 @@ if (temp <= 10 && wind > 4.8) {
 } else {
   chillDisplay.textContent = "N/A";
 }
+
+
