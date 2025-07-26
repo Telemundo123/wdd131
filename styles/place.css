@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 2;
-  font-size: larger;
+  font-size: medium;
 }
 
 header {
@@ -100,14 +100,14 @@ footer {
     content: '';
   }
 
-  .weather-svg {
-    display: block;
-  }
+  footer {
+      background-color: var(--secondary-color);
+    }
 }
 
 @media screen and (min-width: 800px) {
     main {
-      background-image: url(images/place-rwanda.jpg);
+      background-image: url(images/place-rwanda.webp);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -126,5 +126,4 @@ footer {
       right: 1rem;
       width: 40%;
     }
-
 }
