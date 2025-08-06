@@ -131,6 +131,7 @@ smallTemple.addEventListener("click", (e) => {
 });
 
 // Function to create temple cards
+
 function createTempleCard(filteredTemples) {
   const container = document.querySelector(".Album");
   container.innerHTML = "";
