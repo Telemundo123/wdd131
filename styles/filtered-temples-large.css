@@ -75,11 +75,13 @@ h1 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
 }
-.Album figure img {
-    border-radius: 10px;
-    object-fit: cover;
-    inline-size: 100%;
-    block-size: 100%;
+
+.Album section img {
+    width: 400px;           
+    height: 250px;         
+    object-fit: cover;  
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
 }
 .Album figure figcaption {

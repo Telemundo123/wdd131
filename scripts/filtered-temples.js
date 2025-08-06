@@ -62,6 +62,27 @@ const temples = [
     area: 116642,
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
+  {
+    templeName: "Apia Samoa",
+    location: "Apia, Pesega, Samoa",
+    dedicated: "1983, August, 5",
+    area: 18691,
+    imageUrl: "https://www.churchofjesuschrist.org/imgs/6007b20e832459d2d8540c15a8f5fa80d7dcff0f/full/640%2C/0/default"
+  },
+  {
+    templeName: "Bangkok Thailand",
+    location: "Bangkok, Thailand",
+    dedicated: "2023, October, 22",
+    area: 48525,
+    imageUrl: "https://www.churchofjesuschrist.org/imgs/4052d9f8ff0e11edb9dbeeeeac1e97aea1b93079/full/640%2C/0/default"
+  },
+  {
+    templeName: "Calgary Alberta",
+    location: "Calgary, Alberta, Canada",
+    dedicated: "2012, October, 28",
+    area: 33000,
+    imageUrl: "https://www.churchofjesuschrist.org/imgs/eafebe542f696c22dd64a03e622990b9a191c411/full/640%2C/0/default"
+  }
 ];
 
 // Initial display (Home)
