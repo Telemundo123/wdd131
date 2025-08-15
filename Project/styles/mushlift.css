@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+    font-size: larger;
+}
+header main footer {
+    width: 100%;
+}
+.brand {
+    font-size: 2.5rem;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: #fff;
+    background-color: rgb(1, 35, 74);  
+}
+
+.navbar img {
+    width: 120px;
+    border-radius: 120px;
+}
+
+.logo-container h1 {
+    display: inline;
+}
+@media (min-width: 761px) {
+.nav-links {
+       display: flex;
+       list-style: none;
+       gap: 50px;
+       
+    }
+}
+   
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+.nav-links li a:hover {
+    color: yellowgreen;
+    font-weight: 700;
+}
+
+.hamburger {
+    display: none;
+}
+
+main {
+    margin:0px;
+    padding:0px;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+/* Reset some defaults */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('https://www.news-medical.net/images/news/ImageForNews_747987_16838209933048009.jpg') no-repeat center center/cover;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* tried to make it dark for readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* making this dark made it more readable */
+    z-index: 1;
+}
+
+/* Displayed the content on top of the image background */
+.hero h2,
+.hero p,
+.hero .btn {
+    position: relative;
+    z-index: 2;
+}
+
+/* Title styling!!!*/
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+
+.hero p {
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 3rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: #28a745;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #a8f3b8;
+    transform: scale(1.05);
+}
+
+/* Responsive on small screens */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+
+/* On small screens */
+
+@media(max-width:760px) {
+    #hamburger {
+        display: block;
+        font-size: 3rem;
+	    font-weight: 400;
+	    text-decoration: none;
+	    padding: 0.5rem 0.75rem;
+	    background-color: rgb(1, 35, 74);
+	    color: white;
+    }
+    #navLinks {
+        display: none;
+    }
+    #hamburger::before {
+	   content: "☰";
+    }
+    
+    #navLinks.show {
+       display: flex;
+       padding: 40px; 
+       gap: 30px;
+       list-style: none;
+       align-items: center;   
+       flex-direction: column; 
+       width: 100vw; 
+       background-color: rgb(1, 35, 74); 
+       position: absolute;
+       top: 100px;                   
+       left: 0;
+       z-index: 99;
+    }
+    #hamburger.show::before {
+	    content: "X";
+    }
+    
+}
+
+/* Styles for Products page (products.html) */
+
+.products-section {
+    padding: 2rem;
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.products-section h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2d2d2d;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h2 {
+    font-size: 1.25rem;
+    margin: 0.75rem 0;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Styles for the About Us Page */
+
+
+.about-hero {
+    position: relative;
+    background: url('https://www.popsci.com/wp-content/uploads/2023/03/06/01_Beech_web.jpg?quality=85') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.about-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.about-hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-hero-text p {
+    font-size: 1.2rem;
+}
+
+.about-section {
+    padding: 4rem 10%;
+    background: #fff;
+}
+
+.about-section.alt {
+    background: #f9f9f9;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.about-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.about-text p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.cta-section {
+    text-align: center;
+    padding: 3rem 10%;
+    background: #2c3e50;
+    color: #fff;
+}
+
+.cta-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #27ae60;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #219150;
+}
+
+/* used media query for Responsive display of the about content */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    .about-hero {
+        height: 40vh;
+    }
+    .about-hero-text h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Styles for Contact Us Page*/
+.page-header {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: linear-gradient(135deg, #3a7d44, #74b49b);
+    color: white;
+}
+.page-header h1 {
+    font-size: 2.5rem;
+}
+
+
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    background: #f9f9f9;
+}
+.contact-info {
+    flex: 1 1 300px;
+    font-size: 1.1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.contact-info p {
+    text-align: center;
+    line-height: 1.9;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+form {
+    flex: 1 1 300px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+form button {
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #3a7d44;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 70%;
+    margin-left: 15%;
+    font-size: 1.3rem;
+}
+form button:hover {
+    background: #2e5c35;
+}
+
+/* Team Section, I used cards sort of methode and displayed them in flex layout */
+.team-section {
+    padding: 3rem 2rem;
+    background: #fff;
+    text-align: center;
+}
+.team-section h2 {
+    margin-bottom: 2rem;
+    color: #3a7d44;
+}
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 400px;
+    background: #cbcbcb;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.member-info {
+    text-align: left;
+}
+.member-info h3 {
+    margin: 0;
+    color: #333;
+}
+.member-info p {
+    margin: 0.3rem 0;
+}
+
+/* Responsive Design on small screens even */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+    .member-info {
+        text-align: center;
+    }
+}
+
+.required {
+    color: red;
+}
+
+/* Product review Form Style*/
+
+form {
+    max-width: 600px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+input, select, textarea, button {
+    margin-top: 5px;
+    padding: 15px;
+    font-size: 16px;
+}
+button {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.formheader {
+    padding: 5px;
+    margin-top:40px;
+}

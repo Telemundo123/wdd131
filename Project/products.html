@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushlift Products</title>
+    <link rel="stylesheet" href="styles/mushlift.css">
+    <script src="scripts/mushlift.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="images/LOGO.png" alt="Mushlift Logo">
+                <h1>MUSHLIFT LTD</h1>
+            </div>
+            <a id="hamburger" class="hamburger" href="#"></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="products-section">
+        <h1>Our Products</h1>
+        <div class="products-grid">
+
+          <!-- Here I prefered using the card methode to display the mushroom products we provide-->  
+          <div class="product-card">
+                <img src="images/mushroom-freshoyester.webp" alt="Fresh oyster mushrooms on display">
+                <h2>Fresh Oyster Mushrooms</h2>
+                <p>Grown locally and sold fresh to the local market, providing a healthy and affordable food option.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/mushroom-powder1.webp" alt="Packaged mushroom powder">
+                <h2>Mushroom Powder</h2>
+                <p>Dried and finely ground mushrooms, rich in nutrients, used as a supplement in various foods.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/mushroom-powder.webp" alt="Fortified porridge flour pack">
+                <h2>Fortified Porridge Flour</h2>
+                <p>A blend of porridge flour enriched with mushroom powder to combat malnutrition, especially for children, mothers, and the elderly.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/mushroom-canedfood.webp" alt="Canned mushroom sauce">
+                <h2>Ready-to-Consume Canned Mushroom Sauce</h2>
+                <p>A convenient, nutrient-rich sauce made from mushrooms, perfect for quick meals.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/mushroom-snack.webp" alt="Mushroom-based snack pack">
+                <h2>Mushroom-Based Snacks</h2>
+                <p>Delicious, healthy snacks made from mushrooms, available in different flavors for everyone to enjoy.</p>
+            </div>
+
+        </div>
+        <h1 class="formheader">Product Review Form</h1>
+        <form id="reviewForm" method="get" action="review.html">
+            <label for="product">Product Name:</label>
+            <select id="product" required></select><br>
+
+            <label for="rating">Rating (1-5):</label>
+            <input type="number" id="rating" min="1" max="5" required><br>
+
+            <label for="installationDate">Date of Installation:</label>
+            <input type="date" id="installationDate" required><br>
+
+            <label for="reviewText">Your Review:</label>
+            <textarea id="reviewText" rows="4" required></textarea><br>
+
+            <label for="userName">Your Name:</label>
+            <input type="text" id="userName" required><br>
+
+            <button type="submit">Submit Review</button>
+        </form>
+
+    
+    </main>
+
+    <footer>
+        <p>©️<span id="currentyear"></span> 🌺Davis Rukundo🌺 Rwanda</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
