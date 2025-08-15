@@ -32,29 +32,38 @@ if (hour < 12) {
 // Scripts regarding the product review form
 
 // I created an array from my products
-    const products = [
-        { id: "fm-001", name: "Fresh Oyster Mushrooms" },
-        { id: "mp-002", name: "Mushroom Powder" },
-        { id: "fp-003", name: "Fortified Porridge Flour" },
-        { id: "rc-004", name: "Ready-to-Consume Canned Mushroom Sauce" },
-        { id: "ms-005", name: "Mushroom-Based Snacks" }
-    ];
+const products = [
+    { id: "fm-001", name: "Fresh Oyster Mushrooms" },
+    { id: "mp-002", name: "Mushroom Powder" },
+    { id: "fp-003", name: "Fortified Porridge Flour" },
+    { id: "rc-004", name: "Ready-to-Consume Canned Mushroom Sauce" },
+    { id: "ms-005", name: "Mushroom-Based Snacks" }
+];
 
-    const productSelect = document.getElementById('product');
+const productSelect = document.getElementById("product");
 
-    // Using ForEach() Methode I populated the array to the form in the select product input
-    products.forEach(product => {
-        const option = document.createElement('option');
-        option.value = product.name;
-        option.textContent = product.name;
-        productSelect.appendChild(option);
+// Using ForEach() Methode I populated the array to the form in the select product input
+products.forEach(product => {
+    const option = document.createElement("option");
+    option.value = product.name;
+    option.textContent = product.name;
+    productSelect.appendChild(option);
+});
+
+
+// Logic to handle form submission and review counter
+const reviewForm = document.getElementById('reviewForm');
+const reviewCounterElement = document.querySelector('.counter');
+
+if (reviewForm) {
+    reviewForm.addEventListener('submit', () => {
+        let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
+        reviewCount++;
+        localStorage.setItem("reviewCount", reviewCount);
     });
+}
 
-    
-// Increment review counter
-let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
-reviewCount++;
-localStorage.setItem("reviewCount", reviewCount);
-
-// Display the count
-document.querySelector(".counter").textContent = reviewCount;
+if (reviewCounterElement) {
+    const reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
+    reviewCounterElement.textContent = reviewCount;
+}
