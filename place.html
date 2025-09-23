@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Rubia Magdelena Francesco">
+  <title>Rwanda</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Rwanda</h1>
+  </header>
+
+  <main>
+    <picture class="hero-img">
+      <source srcset="images/place-rwanda.webp" media="(min-width: 600px)">
+      <img src="images/small.webp" alt="Lemurs in Madagascar">
+    </picture>
+
+    <section class="data">
+      <h2>Data</h2>
+      <ul>
+        <li><strong>Area:</strong> 26,338 sq km</li>
+        <li><strong>Population:</strong> 13,462,000</li>
+        <li><strong>Capital:</strong> Kigali</li>
+        <li><strong>Languages:</strong> Kinyarwanda, English, French</li>
+        <li><strong>Currency:</strong> Rwandan Franc (RWF)</li>
+        <li><strong>Time Zone:</strong> UTC+2</li>
+        <li><strong>Calling Code:</strong> +250</li>
+        <li><strong>Internet TLD:</strong> .rw</li>
+      </ul>
+    </section>
+
+    <section class="weather">
+      <h2>Weather <span class="weather-icon"></span></h2>
+      <img src="images/weather.svg" alt="partly cloudy icon" class="weather-svg">
+      <ul>
+        <li><strong>Temperature:</strong> <span id="temp">20</span> °C</li>
+        <li><strong>Conditions:</strong> Partly Cloudy</li>
+        <li><strong>Wind:</strong> <span id="wind">3</span> km/h</li>
+        <li><strong>Wind Chill:</strong> <span id="chill"></span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>©<span id="year"></span> 🌸 Davis Rukundo 🌸 Rwanda</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

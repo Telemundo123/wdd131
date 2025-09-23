@@ -1,0 +1,129 @@
+:root {
+  --primary-color: #144ddd; 
+  --secondary-color: #007847;
+  --secondary-color2: #ffff00;
+  --text-light: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+  font-size: medium;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 20px solid var(--secondary-color2);
+}
+
+.hero-img img {
+  width: 100%;
+  display: block;
+}
+
+.data, .weather {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.data h2, .weather h2 {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.5rem;
+  margin: -1rem -1rem 1rem -1rem;
+}
+
+.weather h2::after {
+  content: '⛅';
+  margin-left: 0.5rem;
+}
+
+.weather-svg {
+  display: none;
+  width: 50px;
+  margin: auto;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .data h2 {
+    border-top: 8px solid #144ddd;
+    background-color: transparent;
+    color: black;
+    text-align: center;
+  
+  }
+
+  .data ul li {
+    list-style: none;
+    text-align: center;
+
+  }
+
+  .weather h2 {
+    background-color: transparent;
+    color: black;
+    text-align: center;
+  }
+
+  .weather ul li {
+    list-style: none;
+    text-align: center;
+  }
+
+  .weather-svg {
+    display: block;
+    width: 130px;
+  }
+
+
+
+  .weather h2::after {
+    content: '';
+  }
+
+  footer {
+      background-color: var(--secondary-color);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    main {
+      background-image: url(images/place-rwanda.webp);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+
+    }
+    .data {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 40%;
+    }
+    .weather {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      width: 40%;
+    }
+}
