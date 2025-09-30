@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+    font-size: larger;
+}
+header main footer {
+    width: 100%;
+}
+.brand {
+    font-size: 2.5rem;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: #fff;
+    background-color: rgb(1, 35, 74);  
+}
+@media (min-width: 761px) {
+.nav-links {
+       display: flex;
+       list-style: none;
+       gap: 50px;
+       
+    }
+}
+   
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+.nav-links li a:hover {
+    color: yellowgreen;
+    font-weight: 700;
+}
+
+.hamburger {
+    display: none;
+}
+
+main {
+    margin: 30px;
+    padding: 20px;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.Album {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 10px;
+    justify-items: center;
+
+}
+
+.Album section {
+    background-color: #e1e1e1;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.Album section img {
+    width: 400px;           
+    height: 250px;         
+    object-fit: cover;  
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+}
+.Album figure figcaption {
+    text-align: center;
+}
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
